@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wdth,wght@0,6..12,75..125,200..1000;1,6..12,75..125,200..1000&display=swap');
+
+header {
+  background-color: #FFFFFF;
+  box-shadow: #3F3D3D3D 0px 3px 8px;
+  display: flex;
+  flex-direction: column;
+  height: 148px;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  z-index: 999;
+}
+
+#top-discount-div{
+  align-items: center;
+  background-color: #005CFF;
+  display: flex;
+  justify-content: center;
+  height: 30px;
+  width: 100vw;
+}
+
+#top-discount-span {
+  color: #FFFFFF;
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0%;
+}
+
+#top-discount-value-div {
+  display: flex;
+}
+
+#top-discount-value-span {
+  background-color: #6220C1;
+  border-radius: 5px;
+  margin-right: 4px;
+  padding-left: 2px;
+}
+
+#top-discount-coupon-span {
+  font-weight: 400;
+  font-style: italic;
+}
+
+#top-search-profile-div {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+#top-search-div {
+  align-items: center;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+
+#top-form {
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid #3F3D3D3D;
+  display: flex;
+  justify-content:space-between;
+  height: 40px;
+  left: 548px;
+  padding: 2px;
+  top: 46px;
+  outline: none;
+  width: 594px;
+}
+
+#top-input-search {
+  border-radius: 10px;
+  border: none;
+  height: 30px;
+  left: 548px;
+  padding-left: 15px;
+  top: 46px;
+  outline: none;
+  width: 580px;
+}
+
+#top-input-search::placeholder {
+  color: #000000;
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+#top-button-search {
+  background-color: transparent;
+  background-image: url('/src/assets/magnifying-glass.png');
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  border: none;
+  cursor: pointer; 
+  height: 25px;
+  margin-right: 15px;
+  width: 25px;
+}
+
+#top-profile-cart-div{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 28px;
+  top: 52px;
+  left: 1417px;
+  gap: 24px;
+  width: 190px;
+}
+
+#top-greeting-img-div {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+#top-greeting-span {
+  font-family: "Nunito Sans";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0%;
+}
+
+#top-menu-and-categories-div {
+  align-items: center;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#top-menu-img {
+  display: inline-block;
+  stroke: #000000;
+  height: 20px;
+  vertical-align: middle;
+  width: 20px;
+}
+
+.top-departments {
+  background-color: #FFFFFF;
+  font-family: "Nunito Sans";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0%;
+}
+
+.dropbtn {
+  align-items: center;
+  background-color: #FFFFFF;
+  color: #000000;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  display: flex;
+  font-family: "Nunito Sans";
+  font-weight: 700;
+  font-size: 14px;
+  gap: 8px;
+  justify-content: center;
+  line-height: 22px;
+  letter-spacing: 0%;
+}
+
+.dropbtn:hover {
+  color: #005CFF;
+}
+
+.dropdown {
+  background-color: #FFFFFF;
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content {
+  box-shadow: #3F3D3D3D 0px 3px 8px;
+  display: none;
+  position: absolute;
+  background-color: #FFFFFF;
+  height: 329px;
+  min-width: 160px;
+  width: 90vw;
+  overflow-y: scroll;
+  z-index: 1;
+  transition: stroke 0.3s ease;
+  z-index: 1000;
+}
+
+.dropdown-content a {
+  color: #000000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: "Nunito Sans";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+}
+
+.dropdown-content a:hover {color: #005CFF;}
+
+.dropbtn:hover #top-menu-img {
+  stroke: #005CFF;
+}
+
+.dropdown:hover .dropdown-content {display: block;}

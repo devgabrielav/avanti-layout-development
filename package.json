@@ -1,0 +1,25 @@
+{
+  "name": "avanti-layout-development",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devgabrielav/avanti-layout-development.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devgabrielav/avanti-layout-development/issues"
+  },
+  "homepage": "https://github.com/devgabrielav/avanti-layout-development#readme"
+}
