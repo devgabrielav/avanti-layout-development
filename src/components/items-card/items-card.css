@@ -1,0 +1,134 @@
+.cards {
+  align-items: start;
+  border: 1px solid #3F3D3D3D;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  padding: 5px 15px;
+  position: relative;
+  width: 220px;
+}
+
+.new-tag {
+  background-color: #00264E;
+  border-radius: 4px;
+  color: #FFFFFF;
+  font-family: Nunito Sans;
+  font-size: 10px;
+  font-weight: 700;
+  height: 22px;
+  left: 8px;
+  letter-spacing: 0%;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  top: 7px;
+  width: 41px;
+}
+
+.item-image {
+  height: 222px;
+  left: 8px;
+  top: 6px;
+  width: 222px;
+}
+
+.item-title {
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  font-weight: 400;
+  height: 39px;
+  left: 8px;
+  letter-spacing: 0%;
+  line-height: 100%;
+  text-transform: capitalize;  
+  top: 244px;
+  margin-top: 15px;
+  width: 222px;
+}
+
+.values-div {
+  align-items: start;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.original-price {
+  font-family: "Nunito Sans";
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0%;
+  line-height: 100%;
+  text-decoration: line-through;
+  text-transform: capitalize;
+}
+
+.discount-price {
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0%;
+  line-height: 100%;
+  text-transform: capitalize;
+}
+
+.discount-percent {
+  background-color: #5EC0BE;
+  border-radius: 4px;
+  color: #FFFFFF;
+  gap: 10px;
+  height: 20px;
+  padding-bottom: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  left: 90px;
+  top: 295px;
+  width: 64px;
+}
+
+.payment-type {
+  margin: 10px 0 15px 0;
+}
+
+.start-payment-type {
+  font-family: "Nunito Sans";
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0%;
+  line-height: 100%;
+}
+
+.payment-type-values {
+  font-family: "Nunito Sans";
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0%;  
+  line-height: 100%;
+}
+
+.buy-button {
+  background-color: #005CFF;
+  border: none;
+  border-radius: 8px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-weight: 700;
+  gap: 10px;
+  height: 40;
+  left: 8px;
+  letter-spacing: 0%;
+  line-height: 20px;
+  padding-bottom: 10px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 10px;
+  text-align: center;
+  top: 361px;
+  width: 222px;
+}

@@ -1,0 +1,41 @@
+.mug-banner {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 80vw;
+  height: 747px;
+}
+
+.mug-banner-image-div {
+  background-color: #C2C2C2;
+}
+
+.mug-banner-paragraphs-div {
+  align-items:start;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  margin-left: 40px;
+  top: 105.5px;
+  left: 690px;
+  gap: 22px;
+}
+
+.mug-banner-title {
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 140%;
+  letter-spacing: 4%;
+  text-transform: uppercase;
+}
+.mug-banner-paragraphs {
+  font-family: "Nunito";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 5%;
+}

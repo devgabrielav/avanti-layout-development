@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <link rel="icon" type="image/svg+xml" href="/src/assets/icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="src/reset-css.css">
-  <link rel="stylesheet" href="src/style.css">
-  <link rel="stylesheet" href="src/components/header/header.css">
+  <link rel="stylesheet" href="src/main.css">
+  <script src="./src/swiper/swiper-bundle.min.js"></script>
   <script type="module" src="src/main.js"></script>
+  <script src="./src/swiper/script.js"></script>
   <title>AVANTI</title>
 </head>
 <body>
@@ -17,45 +17,13 @@
       <img src="/src/assets/chair.png" alt="Imagem de uma cadeira com roupas"/>
       <img src="/src/assets/supersale.png" alt="Informe de SUPERSALE, itens selecionados com até 50% OFF."/>
     </div>
-    <div class="carrossel">
-      <div class="carrossel-texts">
-        <h3>Lançamentos</h3>
-        <a href="#">Ver mais</a>
-      </div>
-      <div class="carrossel-itens">
-        <button class="prev" class="arrow">&lt;</button>
-        <button class="next" class="arrow">&gt;</button>
-      </div>
-    </div>
-    <section id="first-banner">
-      <div id="first-banner-image-div">
-        <img src="/src/assets/mug.png" alt="Imagem de uma caneca com a logo da AVANTI."/>
-      </div>
-      <div id="first-banner-paragraphs-div">
-        <h2 id="first-banner-title">Lorem Ipsum</h2>
-        <p class="first-banner-paragraphs">
-            Duis consectetur metus nec lacus auctor dignissim.
-            Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra.
-            Cras efficitur volutpat dui, in lobortis metus lacinia sit amet.
-            Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a.
-            Maecenas fringilla porttitor tortor eget lacinia.
-            Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum.
-            Fusce sagittis elit a libero commodo egestas efficitur id augue.                  
-        </p>
-        <p class="first-banner-paragraphs">
-            Duis consectetur metus nec lacus auctor dignissim.
-            Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra.
-            Cras efficitur volutpat dui, in lobortis metus lacinia sit amet.
-            Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a.
-            Maecenas fringilla porttitor tortor eget lacinia.
-            Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum.
-            Fusce sagittis elit a libero commodo egestas efficitur id augue.                  
-        </p>
-      </div>
+    <section class="items mySwiper">
     </section>
-    <section id="second-banner">
-      <div id="second-banner-paragraphs-div">
-        <h2 id="second-banner-title">Lorem Ipsum</h2>
+    <section class="mug-banner">
+    </section>
+    <section class="second-banner">
+      <div class="second-banner-paragraphs-div">
+        <h2 class="second-banner-title">Lorem Ipsum</h2>
         <p class="second-banner-paragraphs">
           <img src="/src/assets/location-icon.png" alt="">
           Aenean massa.
@@ -75,10 +43,40 @@
           Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.                      
         </p>
       </div>
-      <div id="second-banner-image-div">
+      <div class="second-banner-image-div">
         <img src="/src/assets/second-banner.png" alt="Imagem de uma caneca com a logo da AVANTI."/>
       </div>
     </section>
+    <section class="mug-banner">
+    </section>
+    <section class="items mySwiper">
+    </section>
+    <section class="third-banner">
+      <div class="third-banner-message-div">
+        <p class="third-banner-message">
+          Entre em contato conosco e verifique a disponibilidade para sua região!
+        </p>
+      </div>
+    </section>
+    <section class="newsletter">
+      <p class="newsletter-title">
+        Cadastre-se na nossa <span>newsletter</span>
+      </p>
+      <form class="newsletter-form">
+        <input type="text" placeholder="Digite seu nome" class="newsletter-inputs"/>
+        <input type="text" placeholder="Digite seu e-mail" class="newsletter-inputs"/>
+        <label class="pvcheckbox-label">
+          <input
+            type="checkbox"
+            name="Checkbox política de privacidade"
+            class="newsletter-check-input"
+          />
+          Estou de acordo com a <a href="#">Política de Privacidade</a>
+        </label>
+        <button class="newsletter-button">Cadastrar</button>
+      </form>
+    </section>
+    <div id="footer-placeholder"></div>
   </main>
 </body>
 </html>

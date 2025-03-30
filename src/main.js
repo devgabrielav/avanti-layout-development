@@ -16,41 +16,46 @@ fetch('src/components/header/header.html')
     addDropdownContent();
   });
 
-const carrossel = document.querySelector('.carrossel-itens');
+fetch('src/components/items-carrossel/items-carrossel.html')
+  .then(response => response.text())
+  .then(data => {
+    const mySwipers = document.querySelectorAll('.mySwiper');
 
-function addCarrosselContent() {
-  const carrossel = document.querySelector(".carrossel-itens");
-
-  if (!carrossel) {
-    console.error("Erro: Carrossel não encontrado.");
-    return;
-  }
-
-  const fragment = document.createDocumentFragment();
-
-  for (let i = 0; i < 15; i++) {
-    const itemDiv = document.createElement("div");
-    itemDiv.className = "item-div";
-
-    itemDiv.innerHTML = `
-      <img class="item-image" src="src/assets/default-product.png" alt="Produto">
-      <h3 class="item-title">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</h3>
-      <div class="values-div">
-        <div class="prices-div">
-          <p class="original-price">R$ 100,00</p>
-          <p class="discount-price">R$ 79,90</p>
-        </div>
-        <span class="discount-percent">10% OFF</span>
+    mySwipers.forEach((swiper) => {
+      swiper.innerHTML = `
+      <div class="carrossel-texts">
+        <h3>Lançamentos</h3>
+        <a href="#">Ver mais</a>
       </div>
-      <span class="start-payment-type">Ou em até</span>
-      <span class="payment-type">10x de R$ 7,90</span>
-      <button class="buy-button">Comprar</button>
-    `;
+      ${data}
+    `
+    });
+  })
 
-    fragment.appendChild(itemDiv);
-  }
+fetch('src/components/items-card/items-card.html')
+.then(response => response.text())
+.then(data => {
+  const slides = document.querySelectorAll('.slide');
 
-  carrossel.appendChild(fragment);
-}
+  slides.forEach((slide) => {
+    for (let i = 0; i < 5; i++) {
+      slide.innerHTML += data;
+    }
+  });
+})
 
-addCarrosselContent();
+fetch('src/components/mug-banner/mug-banner.html')
+.then(response => response.text())
+.then(data => {
+  const mugBanners = document.querySelectorAll('.mug-banner');
+
+  mugBanners.forEach((banner) => {
+    banner.innerHTML = data
+  })
+});
+
+fetch('src/components/footer/footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer-placeholder').innerHTML = data;
+  });
