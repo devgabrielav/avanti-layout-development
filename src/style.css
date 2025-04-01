@@ -19,11 +19,67 @@ body {
 
 .second-banner {
   align-items: center;
+  background-color: #DEDEDE;
   display: flex;
   justify-content: center;
   margin: auto;
-  width: 80vw;
   height: 747px;
+  width: 100vw;
+}
+
+.second-banner-main-div {
+  display: flex;
+  gap: 49px;
+  height: 728.13px;
+  left: 371.5px;
+  top: 2171px;
+  width: 1177px;
+}
+
+.second-banner-title {
+  align-items: center;
+  color: #4F4F4F;
+  display: flex;
+  font-family: Nunito;
+  font-size: 30px;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: 4%;
+  line-height: 140%;
+  text-align: center;
+  text-transform: uppercase;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.second-banner-paragraphs-div {
+  margin: auto;
+  height: 567px;
+  width: 476px;
+}
+
+.second-banner-paragraphs {
+  align-items: center;
+  color: #4F4F4F;
+  display: flex;
+  font-family: Nunito;
+  font-size: 18px;
+  font-weight: 400;
+  gap: 15px;
+  justify-content: center;
+  height: 125px;
+  left: 3px;
+  letter-spacing: 5%;
+  line-height: 140%;
+  margin-bottom: 20px;
+  top: 92px;
+  width: 460px;
+}
+
+.second-banner-mug{
+  height: 728.13818359375px;
+  margin: auto;
+  width: 652px;
 }
 
 .third-banner {
@@ -140,6 +196,7 @@ body {
   border-radius: 8px;
   border: none;
   color: #FFFFFF;
+  cursor: pointer;
   font-family: Nunito Sans;
   font-size: 16px;
   font-weight: 700;

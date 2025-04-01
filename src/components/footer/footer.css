@@ -1,0 +1,113 @@
+footer {
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  height: 597px;
+  justify-content: center;
+  margin: 40px 0 40px 0;
+  width: 100vw;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+.first-half-footer-section {
+  align-items: self-start;
+  display: flex;
+  gap: 40px;
+  height: 200px;
+  justify-content: center;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.logo-socials-div {
+  align-items: self-start;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;  
+  height: 93px;
+  justify-content: start;
+  left: 396px;
+  margin: 30px 50px 0 0;
+  width: 194px;
+}
+
+.socials-div {
+  align-items: center;
+  display: flex;
+  gap: 30px;
+  height: 26px;
+  justify-content: start;
+  width: 194px;
+}
+
+.info-divs {
+  color: #303030;
+  display: flex;
+  flex-direction: column;
+  font-family: Nunito Sans;
+  font-size: 12px;
+  font-weight: 400;
+  gap: 12px;
+  height: 142px;
+  justify-content: start;
+  left: 732px;
+  letter-spacing: 0px;
+  line-height: 100%;
+  width: 220px;
+}
+
+.inst-help-service-main-div {
+  align-items: center;
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  width: 50%;
+}
+
+.info-divs h4 {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.service-spans {
+  font-weight: 700;
+}
+
+.service-ps {
+  margin-top: 10px;
+}
+
+.payment-types-div {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: auto;
+}
+
+.second-half-footer-section {
+  align-items: center;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  height: 180px;
+  justify-content: center;
+  width: 100vw;
+}
+
+.main-text-second-half-footer {
+  font-family: Nunito Sans;
+  font-size: 12px;
+  font-weight: 400;
+  height: 59px;
+  letter-spacing: 0%;
+  line-height: 20px;
+  margin: auto;
+  text-align: center;
+  width: 1074px;
+}

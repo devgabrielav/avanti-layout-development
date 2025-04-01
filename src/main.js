@@ -19,10 +19,10 @@ fetch('src/components/header/header.html')
 fetch('src/components/items-carrossel/items-carrossel.html')
   .then(response => response.text())
   .then(data => {
-    const mySwipers = document.querySelectorAll('.mySwiper');
+    const myItems = document.querySelectorAll('.items');
 
-    mySwipers.forEach((swiper) => {
-      swiper.innerHTML = `
+    myItems.forEach((item) => {
+      item.innerHTML = `
       <div class="carrossel-texts">
         <h3>Lançamentos</h3>
         <a href="#">Ver mais</a>

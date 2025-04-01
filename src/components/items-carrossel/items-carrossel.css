@@ -8,10 +8,6 @@
   display: flex;
 }
 
-.swiper-slide {
-  display: flex;
-}
-
 .items-container {
   display: flex;
 }
@@ -43,7 +39,7 @@
   width: 60px;
 }
 
-.swiper-slide {
+.slide {
   display: flex;
   gap: 17px;
   height: 409px;
