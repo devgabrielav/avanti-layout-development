@@ -1,28 +1,56 @@
 .items {
-  height: 478px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 500px;
+  justify-content: center;
   margin: auto;
-  top: 100px;
-  width: 1259px;
+  margin-top: 100px;
+  left: 331px;
+  top: 754px;
+  width: 1240px;
 }
+
+.mySwiper {
+  display: flex;
+  gap: 50px;
+  height: 450px;
+  width: 100%;
+}
+
 .slides-container {
   display: flex;
 }
 
 .items-container {
+  align-items: center;
   display: flex;
+  justify-content: center;
+  height: 420px;
+  top: 800px;
+  left: 331px;
+  gap: 17px;
+  width: 100%;
+}
+
+.carrossel-texts {
+  align-items: center;
+  display: flex;
+  height: 27px;
+  justify-content: space-between;
+  left: 331px;
+  top: 754px;
+  width: 99%;
 }
 
 .carrossel-texts h3 {
+  display: flex;
   font-family: "Nunito Sans";
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 0px;
   line-height: 100%;
-}
-
-.carrossel-texts {
-  display: flex;
-  justify-content: space-between;
 }
 
 .carrossel-texts a {

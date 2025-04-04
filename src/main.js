@@ -35,14 +35,15 @@ fetch('src/components/items-carrossel/items-carrossel.html')
 fetch('src/components/items-card/items-card.html')
 .then(response => response.text())
 .then(data => {
-  const slides = document.querySelectorAll('.slide');
+  const containers = document.querySelectorAll('.items-container');
 
-  slides.forEach((slide) => {
+  containers.forEach((container) => {
     for (let i = 0; i < 5; i++) {
-      slide.innerHTML += data;
+      container.innerHTML += data;
     }
   });
 })
+
 
 fetch('src/components/mug-banner/mug-banner.html')
 .then(response => response.text())

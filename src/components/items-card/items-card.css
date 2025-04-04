@@ -7,7 +7,7 @@
   height: 400px;
   padding: 5px 15px;
   position: relative;
-  width: 220px;
+  width: 200px;
 }
 
 .new-tag {
@@ -32,7 +32,7 @@
   height: 222px;
   left: 8px;
   top: 6px;
-  width: 222px;
+  width: 215px;
 }
 
 .item-title {
@@ -130,5 +130,5 @@
   padding-top: 10px;
   text-align: center;
   top: 361px;
-  width: 222px;
+  width: 200px;
 }
