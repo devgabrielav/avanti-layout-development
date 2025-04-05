@@ -6,10 +6,23 @@
   height: 500px;
   justify-content: center;
   margin: auto;
-  margin-top: 100px;
   left: 331px;
-  top: 754px;
-  width: 1240px;
+  width: 1275px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  flex-wrap: nowrap;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%; /* Permite que os slides se ajustem automaticamente */
 }
 
 .mySwiper {
@@ -17,6 +30,10 @@
   gap: 50px;
   height: 450px;
   width: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
 }
 
 .slides-container {
@@ -28,8 +45,6 @@
   display: flex;
   justify-content: center;
   height: 420px;
-  top: 800px;
-  left: 331px;
   gap: 17px;
   width: 100%;
 }
@@ -40,7 +55,6 @@
   height: 27px;
   justify-content: space-between;
   left: 331px;
-  top: 754px;
   width: 99%;
 }
 
@@ -67,10 +81,39 @@
   width: 60px;
 }
 
-.slide {
-  display: flex;
-  gap: 17px;
-  height: 409px;
-  margin: auto;
-  width: 1258px;
+.swiper-button-next {
+  background-image: url('/src/assets/forward-arrow.png'); /* Substitua pelo caminho da sua imagem */
+  background-size: contain; /* Ajusta a imagem ao tamanho do botão */
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  top: 989px;
+  left: 1574.4px;  
+}
+
+/* Personalizar a seta "anterior" */
+.swiper-button-prev {
+  background-image: url('/src/assets/previous-arrow.png'); /* Substitua pelo caminho da sua imagem */
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  top: 989px;
+  left: 1574.4px;  
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: '';
+  display: none;
+}
+
+.swiper-pagination-bullet {
+  background-color: #838383 !important; /* Substitua pela cor desejada */
+  opacity: 1 !important; /* Garante que os pontos sejam totalmente visíveis */
+}
+
+/* Cor dos pontos ativos */
+.swiper-pagination-bullet-active {
+  background-color: #303030 !important; /* Substitua pela cor desejada para o ponto ativo */
 }

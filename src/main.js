@@ -1,3 +1,17 @@
+const searchResult = () => {
+  const header = document.querySelector('header');
+  const children = header.children;
+  const searchInput = document.querySelector('#top-input-search');
+  const searchResultSpan = document.createElement('h3');
+  const searchResultDiv = document.createElement('div');
+  searchResultDiv.className = 'search-result-div';
+
+  searchResultSpan.innerHTML = `"Você buscou por: ${ searchInput.value }"`;
+
+  header.insertBefore(searchResultDiv, children[children.length - 1]);
+  searchResultDiv.appendChild(searchResultSpan);
+}
+
 fetch('src/components/header/header.html')
   .then(response => response.text())
   .then(data => {
@@ -14,7 +28,15 @@ fetch('src/components/header/header.html')
     }
     
     addDropdownContent();
-  });
+
+    const searchButton = document.getElementById('top-button-search');
+
+    searchButton.addEventListener('click', (event) => {
+      event.preventDefault();
+      
+      searchResult();
+    });
+});
 
 fetch('src/components/items-carrossel/items-carrossel.html')
   .then(response => response.text())
@@ -30,13 +52,35 @@ fetch('src/components/items-carrossel/items-carrossel.html')
       ${data}
     `
     });
+
+    const body = document.querySelector('body');
+
+const swiperScript = document.createElement('script');
+
+swiperScript.innerHTML = `
+  var swiper = new Swiper(".mySwiper", {
+  direction: 'horizontal',
+slidesPerView: 1,
+spaceBetween: 30,
+loop: true,
+pagination: {
+  el: ".swiper-pagination",
+  clickable: true,
+},
+navigation: {
+  nextEl: ".swiper-button-next",
+  prevEl: ".swiper-button-prev",
+},
+});
+`
+
+body.appendChild(swiperScript);
   })
 
 fetch('src/components/items-card/items-card.html')
 .then(response => response.text())
 .then(data => {
   const containers = document.querySelectorAll('.items-container');
-
   containers.forEach((container) => {
     for (let i = 0; i < 5; i++) {
       container.innerHTML += data;
