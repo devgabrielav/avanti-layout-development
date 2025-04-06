@@ -2,32 +2,60 @@ const searchResult = () => {
   const header = document.querySelector('header');
   const children = header.children;
   const searchInput = document.querySelector('#top-input-search');
-  const searchResultSpan = document.createElement('h3');
+  const existingSearchResult = document.querySelector('.search-result-div');
+  
+  if (existingSearchResult) {
+    existingSearchResult.remove();
+  }
+  
   const searchResultDiv = document.createElement('div');
+  const searchResultSpan = document.createElement('h3');
   searchResultDiv.className = 'search-result-div';
-
-  searchResultSpan.innerHTML = `"Você buscou por: ${ searchInput.value }"`;
-
+  
+  if (searchInput.value.trim().length === 0) {
+    searchResultSpan.innerHTML = `"Digite algo para buscar."`;
+  } else {
+    searchResultSpan.innerHTML = `"Você buscou por: ${ searchInput.value }"`;
+  }
+  
   header.insertBefore(searchResultDiv, children[children.length - 1]);
   searchResultDiv.appendChild(searchResultSpan);
+}
+
+const addCategories = () => {
+  const categoriesDivs = document.querySelectorAll('.categories-tags-div');
+
+  categoriesDivs.forEach((catDiv) => {
+    for(let index = 0; index < 8; index += 1) {
+      const categorieEl = document.createElement('a');
+      categorieEl.innerHTML = 'Categoria';
+
+      catDiv.appendChild(categorieEl);
+    }
+  });
 }
 
 fetch('src/components/header/header.html')
   .then(response => response.text())
   .then(data => {
     document.getElementById('header-placeholder').innerHTML = data;
-    const header = document.querySelector('.dropdown-content');
+    const departmentTags = document.querySelector('#main-tags');
     
     function addDropdownContent() {
       for (let index = 0; index < 10; index += 1) {
         const link = document.createElement('a');
         link.href = '#';
-        link.innerHTML = 'Departamento           >';
-        header.appendChild(link);
+        link.innerHTML = `
+          <span>Departamento</span>
+          <span class='arrow-tag'>></span>
+        `;
+        departmentTags.appendChild(link);
       }
     }
     
     addDropdownContent();
+
+    addCategories();
 
     const searchButton = document.getElementById('top-button-search');
 

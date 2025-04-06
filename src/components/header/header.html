@@ -13,7 +13,7 @@
   <div id="top-search-profile-div">
     <div id="top-search-div">
       <img src="/src/assets/AVANTI.png" alt="Logo AVANTI">
-      <form action="" id="top-form">
+      <form onsubmit="searchResult()" id="top-form">
           <input type="text" id="top-input-search" placeholder="Digite aqui o que você procura"/>
           <button id="top-button-search"></button>
       </form>
@@ -39,8 +39,23 @@
         Todas as Categorias
       </button>
       <div class="dropdown-content">
-        <div id="main-links"></div>
-        <div id="links-tags"></div>
+        <div id="main-tags"></div>
+        <div id="extend-tags">
+          <div class="categories-tags-div"></div>
+          <div class="categories-tags-div"></div>
+          <div class="categories-tags-div"></div>
+        </div>
+        <div class="dropdown-image-div">
+          <img src="/src/assets/second-banner.png" alt="Imagem de uma caneca.">
+          <h1>Confira os 
+            Produtos
+            <span>
+              Que acabaram
+              De chegar
+            </span>
+          </h1>
+          <button>VER TODOS</button>
+        </div>
       </div>
     </div>
     <span class="top-departments">Departamento</span>
