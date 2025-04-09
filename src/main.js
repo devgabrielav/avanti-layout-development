@@ -64,7 +64,58 @@ fetch('src/components/header/header.html')
       
       searchResult();
     });
+    const mainTagsLinks = document.querySelectorAll('#main-tags a');
+    const extendTags = document.querySelector('#extend-tags');
+    
+    mainTagsLinks.forEach((link) => {
+      link.addEventListener('mouseover', () => {
+        extendTags.classList.add('active'); // Adiciona a classe para exibir
+      });
+    
+      link.addEventListener('mouseout', () => {
+        extendTags.classList.remove('active'); // Remove a classe para ocultar
+      });
+    });
+
+const topDepartments = document.querySelectorAll('.top-departments');
+const dropdownContentDep = document.querySelector('.dropdown-content-dep');
+
+// Variável para rastrear se o mouse está sobre o dropdown ou os links
+let isHoveringDropdown = false;
+
+// Exibe o dropdown quando o mouse entra em qualquer link .top-departments
+topDepartments.forEach((department) => {
+  department.addEventListener('mouseenter', () => {
+    dropdownContentDep.style.display = 'flex';
+    isHoveringDropdown = true; // Marca que o mouse está sobre o dropdown ou os links
+  });
+
+  department.addEventListener('mouseleave', () => {
+    setTimeout(() => {
+      if (!isHoveringDropdown) {
+        dropdownContentDep.style.display = 'none';
+      }
+    }, 100); // Pequeno atraso para evitar flickering
+  });
 });
+
+// Mantém o dropdown visível enquanto o mouse está sobre ele
+dropdownContentDep.addEventListener('mouseenter', () => {
+  isHoveringDropdown = true; // Marca que o mouse está sobre o dropdown
+  dropdownContentDep.style.display = 'flex';
+});
+
+// Oculta o dropdown quando o mouse sai da área do dropdown
+dropdownContentDep.addEventListener('mouseleave', () => {
+  isHoveringDropdown = false; // Marca que o mouse saiu do dropdown
+  setTimeout(() => {
+    if (!isHoveringDropdown) {
+      dropdownContentDep.style.display = 'none';
+    }
+  }, 100); // Pequeno atraso para evitar flickering
+});
+});
+
 
 fetch('src/components/items-carrossel/items-carrossel.html')
   .then(response => response.text())
@@ -78,8 +129,26 @@ fetch('src/components/items-carrossel/items-carrossel.html')
         <a href="#">Ver mais</a>
       </div>
       ${data}
-    `
+    `;
+
+    const carrosselLinks = document.querySelectorAll('.carrossel-texts a');
+
+    carrosselLinks.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        const discountLinks = document.querySelectorAll('.discount-percent');
+
+        discountLinks.forEach((discountLink) => {
+          discountLink.classList.add('blink');
+
+          setTimeout(() => {
+            discountLink.classList.remove('blink');
+          }, 500);
+        });
+      });
     });
+});
 
     const body = document.querySelector('body');
 

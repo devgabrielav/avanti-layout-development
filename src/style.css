@@ -25,7 +25,7 @@ body {
   display: flex;
   justify-content: center;
   margin: auto;
-  height: 747px;
+  height: 819px;
   width: 100vw;
 }
 
@@ -67,7 +67,7 @@ body {
   font-family: Nunito;
   font-size: 18px;
   font-weight: 400;
-  gap: 15px;
+  gap: 20px;
   justify-content: center;
   height: 125px;
   left: 3px;
@@ -79,7 +79,7 @@ body {
 }
 
 .second-banner-mug{
-  height: 728.13818359375px;
+  height: 728px;
   margin: auto;
   width: 652px;
 }

@@ -54,8 +54,8 @@
   display: flex;
   height: 27px;
   justify-content: space-between;
-  left: 331px;
-  width: 99%;
+  left: 340px;
+  width: 96.3%;
 }
 
 .carrossel-texts h3 {
@@ -79,6 +79,11 @@
   text-align: center;
   text-decoration: none;
   width: 60px;
+}
+
+.carrossel-texts a:hover {
+  color: #005CFF;
+  text-decoration: underline;
 }
 
 .swiper-button-next {

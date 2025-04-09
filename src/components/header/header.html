@@ -12,7 +12,16 @@
   </div>
   <div id="top-search-profile-div">
     <div id="top-search-div">
-      <img src="/src/assets/AVANTI.png" alt="Logo AVANTI">
+      <div class="button-logo-div">
+        <button class="dropbtn-mobile">
+          <svg id="top-menu-img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+        <img src="/src/assets/AVANTI.png" alt="Logo AVANTI">
+      </div>
       <form onsubmit="searchResult()" id="top-form">
           <input type="text" id="top-input-search" placeholder="Digite aqui o que você procura"/>
           <button id="top-button-search"></button>
@@ -25,7 +34,10 @@
           Nome cliente!
         </span>
       </div>
-      <img src="/src/assets/cart.png" alt="Imagem de carrinho de compras">
+      <div class="top-cart-count-div">
+        <span>2</span>
+        <img src="/src/assets/cart.png" alt="Imagem de carrinho de compras">
+      </div>
     </div>
   </div>
   <div id="top-menu-and-categories-div">
@@ -40,7 +52,7 @@
       </button>
       <div class="dropdown-content">
         <div id="main-tags"></div>
-        <div id="extend-tags">
+        <div class="extend-tags">
           <div class="categories-tags-div"></div>
           <div class="categories-tags-div"></div>
           <div class="categories-tags-div"></div>
@@ -58,13 +70,34 @@
         </div>
       </div>
     </div>
-    <span class="top-departments">Departamento</span>
-    <span class="top-departments">Departamento</span>
-    <span class="top-departments">Departamento</span>
-    <span class="top-departments">Departamento</span>
-    <span class="top-departments">Departamento</span>
-    <span class="top-departments">Departamento</span>
-    <span class="top-departments">Departamento</span>
-    <span class="top-departments">Departamento</span>
-  </div>
+    <a href="#" class="top-departments">Departamento</a>
+    <a href="#" class="top-departments">Departamento</a>
+    <a href="#" class="top-departments">Departamento</a>
+    <a href="#" class="top-departments">Departamento</a>
+    <a href="#" class="top-departments">Departamento</a>
+    <a href="#" class="top-departments">Departamento</a>
+    <a href="#" class="top-departments">Departamento</a>
+    <a href="#" class="top-departments">Departamento</a>
+      <div class="dropdown-content-dep">
+        <div class="tags-dep-div">
+          <h3>Departamento</h3>
+          <div class="extend-tags">
+            <div class="categories-tags-div"></div>
+            <div class="categories-tags-div"></div>
+            <div class="categories-tags-div"></div>
+          </div>
+        </div>
+        <div class="dropdown-image-div">
+          <img src="/src/assets/second-banner.png" alt="Imagem de uma caneca.">
+          <h1>Confira os 
+            Produtos
+            <span>
+              Que acabaram
+              De chegar
+            </span>
+          </h1>
+          <button>VER TODOS</button>
+        </div>
+      </div>
+    </div>
 </header>

@@ -132,3 +132,18 @@
   top: 361px;
   width: 200px;
 }
+
+.blink {
+  animation: blink-animation 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes blink-animation {
+  from {
+    background-color: rgba(91, 151, 255, 0.8); /* Azul mais saturado com 60% de opacidade */
+    color: #FFFFFF; /* Cor do texto */
+  }
+  to {
+    background-color: rgba(86, 145, 247, 0.6); /* Azul mais claro com 40% de opacidade */
+    color: #FFFFFF; /* Mantém o texto branco */
+  }
+}
