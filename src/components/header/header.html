@@ -1,74 +1,48 @@
-
 <header>
-  <div id="top-discount-div">
-    <span id="top-discount-span">
-      Ganhe <span id="top-discount-value-span">
+  <section class="top-discount-section">
+    <span class="top-discount-span">
+      Ganhe <span class="top-discount-value-span">
         R$10,00 
       </span>  de desconto no seu primeiro pedido. Utilize o cupom 
-      <span id="top-discount-coupon-span">
+      <span class="top-discount-coupon-span">
         DESCONTO10
       </span>
     </span>
-  </div>
-  <div id="top-search-profile-div">
-    <div id="top-search-div">
-      <div class="button-logo-div">
-        <button class="dropbtn-mobile">
-          <svg id="top-menu-img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
-        <img src="/src/assets/AVANTI.png" alt="Logo AVANTI">
-      </div>
-      <form onsubmit="searchResult()" id="top-form">
-          <input type="text" id="top-input-search" placeholder="Digite aqui o que você procura"/>
-          <button id="top-button-search"></button>
+  </section>
+
+  <section class="top-search-profile-cart-section">
+    <div class="top-logo-form-div">
+      <img src="/src/assets/AVANTI.png" alt="Logo AVANTI">
+      <form onsubmit="searchResult()" class="top-form">
+        <input type="text" class="top-input-search" placeholder="Digite aqui o que você procura"/>
+        <button class="top-button-search"></button>
       </form>
     </div>
-    <div id="top-profile-cart-div">      
-      <div id="top-greeting-img-div">
-        <img src="/src/assets/profile.png" alt="Imagem de perfil">
-        <span id="top-greeting-span">Olá,</br>
+    <div class="top-profile-greeting-cart-div">
+      <div class="top-profile-greeting-div">
+        <img src="/src/assets/profile.png" alt="Imagem de perfil" class="profile-img">
+        <span class="top-greeting-span">Olá,</br>
           Nome cliente!
         </span>
       </div>
       <div class="top-cart-count-div">
-        <span>2</span>
-        <img src="/src/assets/cart.png" alt="Imagem de carrinho de compras">
+        <span class="cart-count-span">2</span>
+        <img src="/src/assets/cart.png" alt="Imagem de carrinho de compras" class="cart-img">
       </div>
     </div>
-  </div>
-  <div id="top-menu-and-categories-div">
-    <div class="dropdown">
+  </section>
+
+  <section class="top-dropdown-departments-section">
+    <div class="dropdown-div">
       <button class="dropbtn">
-        <svg id="top-menu-img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="top-menu-img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="3" y1="12" x2="21" y2="12"></line>
           <line x1="3" y1="6" x2="21" y2="6"></line>
           <line x1="3" y1="18" x2="21" y2="18"></line>
         </svg>
         Todas as Categorias
       </button>
-      <div class="dropdown-content">
-        <div id="main-tags"></div>
-        <div class="extend-tags">
-          <div class="categories-tags-div"></div>
-          <div class="categories-tags-div"></div>
-          <div class="categories-tags-div"></div>
-        </div>
-        <div class="dropdown-image-div">
-          <img src="/src/assets/second-banner.png" alt="Imagem de uma caneca.">
-          <h1>Confira os 
-            Produtos
-            <span>
-              Que acabaram
-              De chegar
-            </span>
-          </h1>
-          <button>VER TODOS</button>
-        </div>
-      </div>
+      <div class="dropdown-content"></div>
     </div>
     <a href="#" class="top-departments">Departamento</a>
     <a href="#" class="top-departments">Departamento</a>
@@ -78,26 +52,6 @@
     <a href="#" class="top-departments">Departamento</a>
     <a href="#" class="top-departments">Departamento</a>
     <a href="#" class="top-departments">Departamento</a>
-      <div class="dropdown-content-dep">
-        <div class="tags-dep-div">
-          <h3>Departamento</h3>
-          <div class="extend-tags">
-            <div class="categories-tags-div"></div>
-            <div class="categories-tags-div"></div>
-            <div class="categories-tags-div"></div>
-          </div>
-        </div>
-        <div class="dropdown-image-div">
-          <img src="/src/assets/second-banner.png" alt="Imagem de uma caneca.">
-          <h1>Confira os 
-            Produtos
-            <span>
-              Que acabaram
-              De chegar
-            </span>
-          </h1>
-          <button>VER TODOS</button>
-        </div>
-      </div>
-    </div>
+    <div class="dropdown-content-dep"></div>
+  </section>
 </header>

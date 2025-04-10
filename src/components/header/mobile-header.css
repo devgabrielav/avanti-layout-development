@@ -1,0 +1,35 @@
+@media (max-width: 390px) {
+  header {
+    width: 100%;
+  }
+  .top-discount-section {
+    align-items: center;
+    height: 52px;
+    justify-content: center;
+    text-align: center;
+    width: 390px;
+  }
+  .dropbtn-mobile {
+    display: flex;
+  }
+  .top-profile-greeting-div{
+    display: none;
+  }
+  .top-dropdown-departments-section {
+    display: none;
+  }
+  .top-search-profile-cart-section {
+    flex-direction: column;
+    width: 390px;
+  }
+  .top-logo-form-div img {
+    height: 20px;
+    width: 30px;
+  }
+  .top-form {
+    width: 100px;
+  }
+  .button-logo-div {
+    display: flex;
+  }
+}

@@ -1,120 +1,43 @@
-const searchResult = () => {
-  const header = document.querySelector('header');
-  const children = header.children;
-  const searchInput = document.querySelector('#top-input-search');
-  const existingSearchResult = document.querySelector('.search-result-div');
-  
-  if (existingSearchResult) {
-    existingSearchResult.remove();
-  }
-  
-  const searchResultDiv = document.createElement('div');
-  const searchResultSpan = document.createElement('h3');
-  searchResultDiv.className = 'search-result-div';
-  
-  if (searchInput.value.trim().length === 0) {
-    searchResultSpan.innerHTML = `"Digite algo para buscar."`;
-  } else {
-    searchResultSpan.innerHTML = `"Você buscou por: ${ searchInput.value }"`;
-  }
-  
-  header.insertBefore(searchResultDiv, children[children.length - 1]);
-  searchResultDiv.appendChild(searchResultSpan);
-}
+import { searchResult, addCategories, addDropdownContent } from "./utils/help-functions";
 
-const addCategories = () => {
-  const categoriesDivs = document.querySelectorAll('.categories-tags-div');
+const screenWidth = window.screen.width;
+const screenHeight = window.screen.height;
 
-  categoriesDivs.forEach((catDiv) => {
-    for(let index = 0; index < 8; index += 1) {
-      const categorieEl = document.createElement('a');
-      categorieEl.innerHTML = 'Categoria';
-
-      catDiv.appendChild(categorieEl);
-    }
-  });
-}
-
-fetch('src/components/header/header.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('header-placeholder').innerHTML = data;
-    const departmentTags = document.querySelector('#main-tags');
+if (screenWidth > 390) {
+  fetch(`src/components/header/header.html`)
+    .then(response => response.text())
+    .then(data => document.getElementById('header-placeholder').innerHTML = data);
+  
+  fetch('src/components/dropdown-content/dropdown-content.html')
+    .then(response => response.text())
+    .then(data => {
+      document.querySelector('.dropdown-content').innerHTML = data
     
-    function addDropdownContent() {
-      for (let index = 0; index < 10; index += 1) {
-        const link = document.createElement('a');
-        link.href = '#';
-        link.innerHTML = `
-          <span>Departamento</span>
-          <span class='arrow-tag'>></span>
-        `;
-        departmentTags.appendChild(link);
-      }
-    }
-    
-    addDropdownContent();
-
-    addCategories();
-
-    const searchButton = document.getElementById('top-button-search');
-
-    searchButton.addEventListener('click', (event) => {
-      event.preventDefault();
+      const departmentTags = document.querySelector('.main-tags');
       
-      searchResult();
-    });
-    const mainTagsLinks = document.querySelectorAll('#main-tags a');
-    const extendTags = document.querySelector('#extend-tags');
-    
-    mainTagsLinks.forEach((link) => {
-      link.addEventListener('mouseover', () => {
-        extendTags.classList.add('active'); // Adiciona a classe para exibir
+      addDropdownContent(departmentTags);
+  
+      const searchButton = document.querySelector('.top-button-search');
+  
+      searchButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        
+        searchResult();
       });
-    
-      link.addEventListener('mouseout', () => {
-        extendTags.classList.remove('active'); // Remove a classe para ocultar
-      });
-    });
-
-const topDepartments = document.querySelectorAll('.top-departments');
-const dropdownContentDep = document.querySelector('.dropdown-content-dep');
-
-// Variável para rastrear se o mouse está sobre o dropdown ou os links
-let isHoveringDropdown = false;
-
-// Exibe o dropdown quando o mouse entra em qualquer link .top-departments
-topDepartments.forEach((department) => {
-  department.addEventListener('mouseenter', () => {
-    dropdownContentDep.style.display = 'flex';
-    isHoveringDropdown = true; // Marca que o mouse está sobre o dropdown ou os links
   });
-
-  department.addEventListener('mouseleave', () => {
-    setTimeout(() => {
-      if (!isHoveringDropdown) {
-        dropdownContentDep.style.display = 'none';
-      }
-    }, 100); // Pequeno atraso para evitar flickering
+  
+  fetch('src/components/dropdown-content/dropdown-content-dep.html')
+    .then(response => response.text())
+    .then(data => {
+      document.querySelector('.dropdown-content-dep').innerHTML = data;
+      
+      addCategories();
   });
-});
-
-// Mantém o dropdown visível enquanto o mouse está sobre ele
-dropdownContentDep.addEventListener('mouseenter', () => {
-  isHoveringDropdown = true; // Marca que o mouse está sobre o dropdown
-  dropdownContentDep.style.display = 'flex';
-});
-
-// Oculta o dropdown quando o mouse sai da área do dropdown
-dropdownContentDep.addEventListener('mouseleave', () => {
-  isHoveringDropdown = false; // Marca que o mouse saiu do dropdown
-  setTimeout(() => {
-    if (!isHoveringDropdown) {
-      dropdownContentDep.style.display = 'none';
-    }
-  }, 100); // Pequeno atraso para evitar flickering
-});
-});
+} else {
+  fetch(`src/components/header/mobile-header.html`)
+    .then(response => response.text())
+    .then(data => document.getElementById('header-placeholder').innerHTML = data);
+}
 
 
 fetch('src/components/items-carrossel/items-carrossel.html')
