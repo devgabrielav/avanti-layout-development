@@ -1,44 +1,34 @@
 import { searchResult, addCategories, addDropdownContent } from "./utils/help-functions";
 
-const screenWidth = window.screen.width;
-const screenHeight = window.screen.height;
+fetch(`src/components/header/header.html`)
+  .then(response => response.text())
+  .then(data => document.querySelector('header').innerHTML = data);
 
-if (screenWidth > 390) {
-  fetch(`src/components/header/header.html`)
-    .then(response => response.text())
-    .then(data => document.getElementById('header-placeholder').innerHTML = data);
+fetch('src/components/dropdown-content/dropdown-content.html')
+  .then(response => response.text())
+  .then(data => {
+    document.querySelector('.dropdown-content').innerHTML = data
   
-  fetch('src/components/dropdown-content/dropdown-content.html')
-    .then(response => response.text())
-    .then(data => {
-      document.querySelector('.dropdown-content').innerHTML = data
+    const departmentTags = document.querySelector('.main-tags');
     
-      const departmentTags = document.querySelector('.main-tags');
-      
-      addDropdownContent(departmentTags);
-  
-      const searchButton = document.querySelector('.top-button-search');
-  
-      searchButton.addEventListener('click', (event) => {
-        event.preventDefault();
-        
-        searchResult();
-      });
-  });
-  
-  fetch('src/components/dropdown-content/dropdown-content-dep.html')
-    .then(response => response.text())
-    .then(data => {
-      document.querySelector('.dropdown-content-dep').innerHTML = data;
-      
-      addCategories();
-  });
-} else {
-  fetch(`src/components/header/mobile-header.html`)
-    .then(response => response.text())
-    .then(data => document.getElementById('header-placeholder').innerHTML = data);
-}
+    addDropdownContent(departmentTags);
 
+    const searchButton = document.querySelector('.top-button-search');
+
+    searchButton.addEventListener('click', (event) => {
+      event.preventDefault();
+      
+      searchResult();
+    });
+});
+
+fetch('src/components/dropdown-content/dropdown-content-dep.html')
+  .then(response => response.text())
+  .then(data => {
+    document.querySelector('.dropdown-content-dep').innerHTML = data;
+    
+    addCategories();
+});
 
 fetch('src/components/items-carrossel/items-carrossel.html')
   .then(response => response.text())
@@ -73,29 +63,29 @@ fetch('src/components/items-carrossel/items-carrossel.html')
     });
 });
 
-    const body = document.querySelector('body');
+const body = document.querySelector('body');
 
 const swiperScript = document.createElement('script');
 
 swiperScript.innerHTML = `
   var swiper = new Swiper(".mySwiper", {
   direction: 'horizontal',
-slidesPerView: 1,
-spaceBetween: 30,
-loop: true,
-pagination: {
-  el: ".swiper-pagination",
-  clickable: true,
-},
-navigation: {
-  nextEl: ".swiper-button-next",
-  prevEl: ".swiper-button-prev",
-},
-});
-`
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  });
+  `
 
-body.appendChild(swiperScript);
-  })
+  body.appendChild(swiperScript);
+})
 
 fetch('src/components/items-card/items-card.html')
 .then(response => response.text())

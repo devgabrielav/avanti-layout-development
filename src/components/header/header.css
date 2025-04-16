@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wdth,wght@0,6..12,75..125,200..1000;1,6..12,75..125,200..1000&display=swap');
 
 header {
+  align-items: center;
   background-color: #FFFFFF;
   box-shadow: #3F3D3D3D 0px 3px 8px;
   display: flex;
   flex-direction: column;
   height: 148px;
   justify-content: space-between;
-  position: fixed;
   left: 0;
+  right: 0;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 999;
@@ -20,7 +22,7 @@ header {
   display: flex;
   height: 30px;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
 }
 
 .top-discount-span {
@@ -47,7 +49,11 @@ header {
 .top-search-profile-cart-section {
   align-items: center;
   display: flex;
-  justify-content: space-around;
+  gap: 50px;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 .top-logo-form-div {
@@ -55,6 +61,7 @@ header {
   display: flex;
   gap: 50px;
   justify-content: center;
+  width: 50%;
 }
 
 .top-form {
@@ -62,24 +69,20 @@ header {
   border: 1px solid #3F3D3D3D;
   border-radius: 10px;
   display: flex;
-  height: 40px;
+  height: 50px;
   justify-content:space-between;
-  left: 548px;
   outline: none;
   padding: 2px;
-  top: 46px;
   width: 594px;
 }
 
 .top-input-search {
   border: none;
   border-radius: 10px;
-  height: 30px;
-  left: 548px;
+  height: 40px;
   padding-left: 15px;
-  top: 46px;
   outline: none;
-  width: 580px;
+  width: 90%;
 }
 
 .top-input-search::placeholder {
@@ -99,9 +102,9 @@ header {
   background-size: cover; 
   border: none;
   cursor: pointer; 
-  height: 25px;
-  margin-right: 15px;
-  width: 25px;
+  height: 30px;
+  margin-right: 10px;
+  width: 30px;
 }
 
 .search-result-div {
@@ -115,11 +118,9 @@ header {
   align-items: center;
   display: flex;
   gap: 24px;
-  height: 28px;
+  height: 40px;
   justify-content: center;
-  left: 1417px;
-  top: 52px;
-  width: 190px;
+  width: 180px;
 }
 
 .top-profile-greeting-div {
@@ -141,9 +142,12 @@ header {
   align-items: center;
   background-color: #FFFFFF;
   display: flex;
-  gap: 21px;
-  height: 40px;
+  gap: 20px;
+  height: 45px;
   justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 .top-menu-img {
@@ -212,7 +216,7 @@ header {
   font-size: 14px;
   font-weight: 700;
   gap: 8px;
-  height: 40px;
+  height: 30px;
   justify-content: center;
   letter-spacing: 0%;
   line-height: 22px;
@@ -315,4 +319,26 @@ header {
 .dropdown-div:hover .dropdown-content {
   display: flex;
   justify-content: space-between;
+}
+
+.top-menu-logo-cart-section-mobile {
+  display: none;
+}
+
+@media (max-width: 390px) {
+  .top-dropdown-departments-section {
+    display: none;
+  }
+  .top-profile-greeting-cart-div {
+    display: none;
+  }
+  .top-cart-count-div {
+    display: none;
+  }
+  .top-logo-form-div img {
+    display: none;
+  }
+  .top-menu-logo-cart-section-mobile {
+    display: flex;
+  }
 }

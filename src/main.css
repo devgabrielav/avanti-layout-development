@@ -1,7 +1,6 @@
 @import url('reset-css.css');
 @import url('style.css');
 @import url('components/header/header.css');
-@import url('components/header/mobile-header.css');
 @import url('components/dropdown-content/dropdown-content.css');
 @import url('components/items-carrossel/items-carrossel.css');
 @import url('components/items-card/items-card.css');
