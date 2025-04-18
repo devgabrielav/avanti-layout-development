@@ -30,7 +30,7 @@ header {
   font-family: "Nunito Sans";
   font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
   line-height: 22px;
 }
 
@@ -49,8 +49,8 @@ header {
 .top-search-profile-cart-section {
   align-items: center;
   display: flex;
-  gap: 50px;
-  justify-content: space-evenly;
+  gap: 200px;
+  justify-content: center;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -69,11 +69,11 @@ header {
   border: 1px solid #3F3D3D3D;
   border-radius: 10px;
   display: flex;
-  height: 50px;
+  height: 45px;
   justify-content:space-between;
   outline: none;
   padding: 2px;
-  width: 594px;
+  width: 600px;
 }
 
 .top-input-search {
@@ -90,7 +90,7 @@ header {
   font-family: "Nunito Sans";
   font-size: 14px;
   font-weight: 600;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
   line-height: 100%;
 }
 
@@ -102,9 +102,9 @@ header {
   background-size: cover; 
   border: none;
   cursor: pointer; 
-  height: 30px;
+  height: 25px;
   margin-right: 10px;
-  width: 30px;
+  width: 25px;
 }
 
 .search-result-div {
@@ -134,7 +134,7 @@ header {
   font-family: "Nunito Sans";
   font-size: 14px;
   font-weight: 600;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
   line-height: 14px;
 }
 
@@ -143,7 +143,7 @@ header {
   background-color: #FFFFFF;
   display: flex;
   gap: 20px;
-  height: 45px;
+  height: 50px;
   justify-content: center;
   margin: 0;
   padding: 0;
@@ -164,10 +164,11 @@ header {
   font-family: "Nunito Sans";
   font-size: 14px;
   font-weight: 400;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
   line-height: 22px;
   margin-left: 15px;
   text-decoration: none;
+  width: 100px;
 }
 
 .top-departments:hover {
@@ -192,17 +193,17 @@ header {
 .top-cart-count-div span {
   background-color: #005CFF;
   border-radius: 50%;
+  bottom: 14px;
   color: #FFFFFF;
   font-family: Nunito;
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0%;
+  left: 17px;
+  letter-spacing: 0px;
   line-height: 14px;
-  padding: 2px 6px;
+  padding: 4px 7.5px;
   position: absolute;
-  right: -5px;
   text-align: center;
-  top: -5px;
   z-index: 2;
 }
 
@@ -218,9 +219,11 @@ header {
   gap: 8px;
   height: 30px;
   justify-content: center;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
   line-height: 22px;
+  margin-left: 50px;
   padding: 16px;
+  width: 200px;
 }
 
 .dropbtn-mobile {
@@ -228,14 +231,14 @@ header {
   background-color: #FFFFFF;
   border: none;
   color: #000000;
-  display: none;
+  display: flex;
   font-family: "Nunito Sans";
   font-size: 14px;
   font-weight: 700;
   gap: 8px;
-  height: 40px;
+  height: 22px;
   justify-content: center;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
   line-height: 22px;
   padding: 16px;
 }
@@ -255,7 +258,7 @@ header {
   box-shadow: #3F3D3D3D 0px 3px 8px;
   display: none;
   height: 329px;
-  left: 15px;
+  left: 65px;
   min-width: 160px;
   overflow: hidden;
   position: absolute;
@@ -272,7 +275,7 @@ header {
   display: none;
   height: 329px;
   justify-content: space-between;
-  left: 90px;
+  left: 365px;
   margin: auto;
   min-width: 160px;
   overflow: hidden;
@@ -326,19 +329,81 @@ header {
 }
 
 @media (max-width: 390px) {
+  header {
+    align-items: center;
+    height: 184px;
+    width: 390px;
+  }
   .top-dropdown-departments-section {
     display: none;
   }
   .top-profile-greeting-cart-div {
     display: none;
   }
-  .top-cart-count-div {
-    display: none;
-  }
   .top-logo-form-div img {
     display: none;
   }
   .top-menu-logo-cart-section-mobile {
+    align-items: center;
     display: flex;
+    justify-content: space-between;
+    padding: 0 20px 0 0;
+    text-align: center;
+    width: 100%;
+  }
+  .top-discount-section {
+    align-items: center;
+    height: 52px;
+    justify-content: center;
+    text-align: center;
+    width: 390px;
+  }
+  .top-avanti-logo {
+    margin-left: -15px;
+  }
+  .top-search-profile-cart-section {
+    gap: 0;
+    margin: 0;
+    left: 50px;
+    position: relative;
+    width: 100%;
+  }
+  .top-logo-form-div {
+    gap: 0;
+    padding-bottom: 15px;
+    width: 100%;
+  }
+  .top-form {
+    height: 40px;
+    left: 20px;
+    top: 128px;
+    width: 361px;
+  }
+  .top-input-search {
+    height: 30px;
+  }
+  .search-result-div {
+    height: 20px;
+    margin-top: -20px;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 1360px) {
+  .top-dropdown-departments-section {
+    margin-left: -100px;
+  }
+  .top-search-profile-cart-section {
+    margin-left: -100px;
+  }
+  .dropbtn {
+    margin-left: 70px;
+    margin-right: -10px;
+  }
+  .dropdown-content {
+    left: 90px;
+  }
+  .dropdown-content-dep {
+    left: 20px;
   }
 }

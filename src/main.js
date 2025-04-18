@@ -1,8 +1,28 @@
-import { searchResult, addCategories, addDropdownContent } from "./utils/help-functions";
+import { searchResult, addCategories, addDropdownContent, paragraphConditions } from "./utils/help-functions";
 
 fetch(`src/components/header/header.html`)
   .then(response => response.text())
   .then(data => document.querySelector('header').innerHTML = data);
+
+  const chairImage = document.querySelector('.chair-image');
+  const selectedSpan = document.querySelector('.selected-span');
+  
+
+  const updateImageSrc = () => {
+    const screenWidth = window.innerWidth;
+  
+    if (screenWidth < 500) {
+      chairImage.src = '/src/assets/mobile-chair.png';
+      selectedSpan.innerHTML = 'Selected items up to';
+    } else {
+      chairImage.src = '/src/assets/chair.png';
+      selectedSpan.innerHTML = 'Itens selecionados com até';
+    }
+  };
+
+  updateImageSrc();
+  
+  window.addEventListener('resize', updateImageSrc);
 
 fetch('src/components/dropdown-content/dropdown-content.html')
   .then(response => response.text())
@@ -88,15 +108,28 @@ swiperScript.innerHTML = `
 })
 
 fetch('src/components/items-card/items-card.html')
-.then(response => response.text())
-.then(data => {
-  const containers = document.querySelectorAll('.items-container');
-  containers.forEach((container) => {
-    for (let i = 0; i < 5; i++) {
-      container.innerHTML += data;
-    }
+  .then(response => response.text())
+  .then(data => {
+    const containers = document.querySelectorAll('.items-container');
+
+    const updateItemsContainer = () => {
+      const screenWidth = window.innerWidth;
+
+      containers.forEach((container) => {
+        container.innerHTML = '';
+
+        const itemCount = screenWidth < 500 ? 2 : 5;
+
+        for (let i = 0; i < itemCount; i++) {
+          container.innerHTML += data;
+        }
+      });
+    };
+
+    updateItemsContainer();
+
+    window.addEventListener('resize', updateItemsContainer);
   });
-})
 
 
 fetch('src/components/mug-banner/mug-banner.html')
@@ -107,7 +140,27 @@ fetch('src/components/mug-banner/mug-banner.html')
   mugBanners.forEach((banner) => {
     banner.innerHTML = data
   })
+  const updateMugParagraphs = () => {
+    const mugParagraphs = document.querySelectorAll('.mug-banner-paragraphs');
+  
+    const screenWidth = window.innerWidth;
+    
+    mugParagraphs.forEach((paragraph, index) => {
+      const paragraphData = paragraphConditions(screenWidth);
+          if (index ===  0 || index === 2) {
+            paragraph.innerHTML = paragraphData[0];
+          } else {
+            paragraph.innerHTML = paragraphData[1]
+          }
+      });
+  }
+  
+  updateMugParagraphs();
+    
+  window.addEventListener('resize', updateMugParagraphs);
 });
+
+
 
 fetch('src/components/footer/footer.html')
   .then(response => response.text())

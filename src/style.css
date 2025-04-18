@@ -16,7 +16,60 @@ body {
   height: 510px;
   margin-bottom: 100px;
   top: 148px;
-  width: 100vw;
+  width: 100%;
+}
+
+.supersale-report-div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  height: 225px;
+  text-align: center;
+  width: 600px;
+}
+
+.super-sale-span {
+  font-family: Nunito;
+  font-size: 100px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 100%;
+  margin-bottom: 15px;
+  margin-left: -15px;
+  text-transform: uppercase;
+}
+
+.sale-span {
+  font-weight: 300;
+}
+
+.selected-span {
+  color: #005CFF;
+  font-family: Nunito;
+  font-size: 25px;
+  font-weight: 700;
+  height: 34px;
+  letter-spacing: 7px;
+  line-height: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.off-span {
+  color: #005CFF;
+  font-family: Nunito;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+
+}
+
+.chair-image {
+  height: 100%;
 }
 
 .second-banner {
@@ -26,15 +79,47 @@ body {
   justify-content: center;
   margin: auto;
   height: 819px;
-  width: 100vw;
+  width: 100%;
+}
+
+@media (max-width: 500px) {
+  .main-div-start {
+    height: 306px;
+    top: 30px;
+    position: relative;
+    justify-content: start;
+  }
+  .inform-image {
+    height: 164px;
+    width: 139px;
+  }
+  .chair-image {
+    mix-blend-mode: Darken;
+    width: 225px;
+  }
+  .supersale-report-div {
+    height: 164px;
+    width: 142px;
+  }
+  .super-sale-span {
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    margin: 0;
+  }
+  .selected-span {
+    font-size: 12px;
+    letter-spacing: 0;
+  }
+  .off-span {
+    font-size: 32px;
+  }
 }
 
 .second-banner-main-div {
   display: flex;
   gap: 49px;
   height: 728.13px;
-  left: 371.5px;
-  top: 2171px;
   width: 1177px;
 }
 
@@ -46,7 +131,7 @@ body {
   font-size: 30px;
   font-weight: 700;
   justify-content: center;
-  letter-spacing: 4%;
+  letter-spacing: 4px;
   line-height: 140%;
   text-align: center;
   text-transform: uppercase;
@@ -71,7 +156,7 @@ body {
   justify-content: center;
   height: 125px;
   left: 3px;
-  letter-spacing: 5%;
+  letter-spacing: 1px;
   line-height: 140%;
   margin-bottom: 20px;
   top: 92px;
@@ -117,7 +202,7 @@ body {
   font-family: "Nunito";
   font-size: 30px;
   font-weight: 400;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
   line-height: 140%;
   text-align: center;
   vertical-align: middle;
@@ -204,7 +289,7 @@ body {
   font-weight: 700;
   gap: 10px;
   height: 48px;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
   line-height: 20px;
   padding-bottom: 14px;
   padding-left: 24px;

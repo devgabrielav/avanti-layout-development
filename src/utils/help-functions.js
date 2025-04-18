@@ -46,3 +46,40 @@ export const addDropdownContent = (tags) => {
     tags.appendChild(link);
   }
 }
+
+export const paragraphConditions = (screenSize) => {
+  if (screenSize < 500) {
+    return [
+      `
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+        nascetur ridiculus mus. Donec quam felis, ultricies nec,
+        pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+      `,
+      `
+        Cras dignissim est et pellentesque tincidunt.Praesent bibendum quis velit a aliquam.
+        Ut vestibulum turpis eget mi iaculis ullamcorper.Curabitur nec metus sed tortor sollicitudin porta nec eu enim.
+        Ut fermentum scelerisque tortor mollis volutpat.Mauris iaculis magna nisl, vel porttitor augue placerat et.
+      `
+    ]
+  }
+  return [
+    `
+      Duis consectetur metus nec lacus auctor dignissim.
+      Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra.
+      Cras efficitur volutpat dui, in lobortis metus lacinia sit amet.
+      Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a.
+      Maecenas fringilla porttitor tortor eget lacinia.
+      Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum.
+      Fusce sagittis elit a libero commodo egestas efficitur id augue.   
+    `,
+    `
+      Duis consectetur metus nec lacus auctor dignissim.
+      Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra.
+      Cras efficitur volutpat dui, in lobortis metus lacinia sit amet.
+      Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a.
+      Maecenas fringilla porttitor tortor eget lacinia.
+      Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum.
+      Fusce sagittis elit a libero commodo egestas efficitur id augue.     
+    `
+  ]
+}
