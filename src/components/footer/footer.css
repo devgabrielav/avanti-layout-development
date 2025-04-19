@@ -5,7 +5,7 @@ footer {
   height: 570px;
   justify-content: center;
   margin: 40px 0 40px 0;
-  width: 100vw;
+  width: 100%;
 }
 
 footer a {
@@ -43,7 +43,7 @@ footer a {
   width: 194px;
 }
 
-.info-divs {
+.info-divs div {
   color: #303030;
   display: flex;
   flex-direction: column;
@@ -110,4 +110,96 @@ footer a {
   margin: auto;
   text-align: center;
   width: 1074px;
+}
+
+.dropdown-icon {
+  display: none;
+}
+@media (max-width: 500px) {
+  footer {
+    flex-direction: column;
+    height: 600px;
+    align-items: self-start;
+  }
+  .first-half-footer-section {
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .logo-socials-div {
+    align-items: center;
+    justify-content: center;
+    width: 194px;
+    margin: 0;
+    height: 93px;
+    gap: 40px;
+  }
+  .socials-div {
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  .inst-help-service-main-div {
+    align-items: center;
+    border-top: 1px solid #DDDDDD;
+    justify-content: start;
+    flex-direction: column;
+    width: 100%;
+  }
+  .info-divs {
+    border-bottom: 1px solid #DDDDDD;
+    justify-content: center;
+    padding: 10px 15px 0 15px;
+    width: 100%;
+  }
+  .info-divs h4 {
+    align-items: center;
+    color: #000000;
+    font-family: Nunito Sans;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    height: 22px;
+  }
+  .info-divs div {
+    display: none;
+  }
+  .info-divs.open div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  .dropdown-icon {
+    margin-left: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .info-divs.open .dropdown-icon svg {
+    transform: rotate(180deg);
+  }
+  .payment-types-div {
+    height: 65px;
+    width: 288px;
+  }
+  .second-half-footer-section {
+    background-color: #FFFFFF;
+    height: 131px;
+    padding: 0;
+    margin-bottom: -20px;
+    width: 100%;
+  }
+  .main-text-second-half-footer {
+    height: 80px;
+    margin: 20px 0;
+    width: 358px;
+  }
 }

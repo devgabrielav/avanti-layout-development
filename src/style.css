@@ -76,52 +76,13 @@ body {
   align-items: center;
   background-color: #DEDEDE;
   display: flex;
+  gap: 49px;
   justify-content: center;
   margin: auto;
   height: 819px;
   width: 100%;
 }
 
-@media (max-width: 500px) {
-  .main-div-start {
-    height: 306px;
-    top: 30px;
-    position: relative;
-    justify-content: start;
-  }
-  .inform-image {
-    height: 164px;
-    width: 139px;
-  }
-  .chair-image {
-    mix-blend-mode: Darken;
-    width: 225px;
-  }
-  .supersale-report-div {
-    height: 164px;
-    width: 142px;
-  }
-  .super-sale-span {
-    display: flex;
-    flex-direction: column;
-    font-size: 40px;
-    margin: 0;
-  }
-  .selected-span {
-    font-size: 12px;
-    letter-spacing: 0;
-  }
-  .off-span {
-    font-size: 32px;
-  }
-}
-
-.second-banner-main-div {
-  display: flex;
-  gap: 49px;
-  height: 728.13px;
-  width: 1177px;
-}
 
 .second-banner-title {
   align-items: center;
@@ -140,8 +101,10 @@ body {
 }
 
 .second-banner-paragraphs-div {
-  margin: auto;
+  display: flex;
+  flex-direction: column;
   height: 567px;
+  margin: auto;
   width: 476px;
 }
 
@@ -180,7 +143,7 @@ body {
   justify-content: center;
   margin: 50px 0;
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
 }
 
 .third-banner-message-div {
@@ -297,4 +260,120 @@ body {
   padding-top: 14px;
   text-align: center;
   width: 121px;
+}
+
+@media (max-width: 500px) {
+  .main-div-start {
+    height: 306px;
+    top: 30px;
+    position: relative;
+    justify-content: start;
+  }
+  .inform-image {
+    height: 164px;
+    width: 139px;
+  }
+  .chair-image {
+    mix-blend-mode: Darken;
+    width: 225px;
+  }
+  .supersale-report-div {
+    height: 164px;
+    width: 142px;
+  }
+  .super-sale-span {
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    margin: 0;
+  }
+  .selected-span {
+    font-size: 12px;
+    letter-spacing: 0;
+  }
+  .off-span {
+    font-size: 32px;
+  }
+  .second-banner {
+    flex-direction: column-reverse;
+    gap: 0px;
+    height: 717px;
+    justify-content: start;
+    padding-top: 25px;
+    width: 100%;
+  }
+  .second-banner-mug {
+    height: 349px;
+    margin: 0;
+    width: 349px;
+  }
+  .second-banner-paragraphs-div {
+    height: 300px;
+    margin: 0;
+    margin-top: 30px;
+    padding: 0;
+    width: 360px;
+  }
+  .second-banner-title {
+    font-size: 20px;
+    margin-bottom: 0px;
+  }
+  .second-banner-paragraphs {
+    color: #000000;
+    justify-content: self-start;
+    font-size: 12px;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .location-icon {
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    width: 60px;
+  }
+  .third-banner {
+    background-image: url('/src/assets/avanti-image-mobile.png');
+    height: 449px;
+  }
+  .third-banner-message-div {
+    height: 75px;
+    width: 100%;
+  }
+  .third-banner-message {
+    font-size: 16px;
+    width: 386px;
+  }
+  .newsletter {
+    flex-direction: column;
+    height: 330px;
+    width: 100%;
+  }
+  .newsletter-title {
+    font-size: 16px;
+  }
+  .newsletter-form {
+    flex-direction: column;
+    height: 284px;
+    width: 358px;
+  }
+  .newsletter-inputs {
+    border-radius: 8px;
+    height: 48px;
+    width: 326px;
+  }
+  .newsletter-check-input {
+    border-radius: 4px;
+    border-width: 1px;
+    height: 16px;
+    width: 16px;
+  }
+  .pvcheckbox-label {
+    height: 16px;
+    width: 285px;
+  }
+  .newsletter-button {
+    width: 326px;
+  }
 }

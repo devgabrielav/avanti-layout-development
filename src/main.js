@@ -1,4 +1,4 @@
-import { searchResult, addCategories, addDropdownContent, paragraphConditions } from "./utils/help-functions";
+import { searchResult, addCategories, addDropdownContent, paragraphConditions, footerParagraphConditions } from "./utils/help-functions";
 
 fetch(`src/components/header/header.html`)
   .then(response => response.text())
@@ -166,4 +166,31 @@ fetch('src/components/footer/footer.html')
   .then(response => response.text())
   .then(data => {
     document.getElementById('footer-placeholder').innerHTML = data;
+
+    const handleResponsiveChanges = () => {
+      const screenWidth = window.innerWidth;
+
+      const flagsImg = document.querySelector('.flags-img');
+      if (flagsImg) {
+        flagsImg.src = screenWidth < 500 ? '/src/assets/flags-mobile.png' : '/src/assets/flags.png';
+      }
+
+      const footerParagraph = document.querySelector('.main-text-second-half-footer');
+      footerParagraph.innerHTML = footerParagraphConditions(screenWidth);
+
+      if (screenWidth < 500) {
+        const headers = document.querySelectorAll('.info-divs h4');
+
+        headers.forEach((header) => {
+          header.addEventListener('click', () => {
+            const parentDiv = header.parentElement;
+            parentDiv.classList.toggle('open');
+          });
+        });
+      }
+    };
+
+    handleResponsiveChanges();
+
+    window.addEventListener('resize', handleResponsiveChanges);
   });
