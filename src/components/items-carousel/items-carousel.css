@@ -2,12 +2,10 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   height: 500px;
   justify-content: center;
   margin: auto;
-  left: 331px;
-  width: 1275px;
+  width: 80.525rem;
 }
 
 .swiper {
@@ -22,7 +20,7 @@
   justify-content: center;
   align-items: center;
   height: auto;
-  width: 100%; /* Permite que os slides se ajustem automaticamente */
+  width: 100%;
 }
 
 .mySwiper {
@@ -45,20 +43,19 @@
   display: flex;
   justify-content: center;
   height: 420px;
-  gap: 17px;
+  gap: 10px;
   width: 100%;
 }
 
-.carrossel-texts {
+.carousel-texts {
   align-items: center;
   display: flex;
   height: 27px;
   justify-content: space-between;
-  left: 340px;
-  width: 96.3%;
+  width: 95%;
 }
 
-.carrossel-texts h3 {
+.carousel-texts h3 {
   display: flex;
   font-family: "Nunito Sans";
   font-size: 20px;
@@ -67,44 +64,38 @@
   line-height: 100%;
 }
 
-.carrossel-texts a {
+.carousel-texts a {
   color: #303030;
   font-family: "Nunito Sans";
   font-size: 14px;
   font-weight: 700;
   height: 20px;
-  left: 3px;
   letter-spacing: 0%;
   line-height: 20px;
   text-align: center;
   text-decoration: none;
-  width: 60px;
+  width: 3.75rem;
 }
 
-.carrossel-texts a:hover {
+.carousel-texts a:hover {
   color: #005CFF;
   text-decoration: underline;
 }
 
 .swiper-button-next {
-  background-image: url('/src/assets/forward-arrow.png'); /* Substitua pelo caminho da sua imagem */
-  background-size: contain; /* Ajusta a imagem ao tamanho do botão */
-  background-repeat: no-repeat;
-  width: 30px;
-  height: 30px;
-  top: 989px;
-  left: 1574.4px;  
-}
-
-/* Personalizar a seta "anterior" */
-.swiper-button-prev {
-  background-image: url('/src/assets/previous-arrow.png'); /* Substitua pelo caminho da sua imagem */
+  background-image: url('/src/assets/forward-arrow.png');
   background-size: contain;
   background-repeat: no-repeat;
-  width: 30px;
-  height: 30px;
-  top: 989px;
-  left: 1574.4px;  
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.swiper-button-prev {
+  background-image: url('/src/assets/previous-arrow.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1.875rem;
+  height: 1.875rem;
 }
 
 .swiper-button-next::after,
@@ -114,11 +105,10 @@
 }
 
 .swiper-pagination-bullet {
-  background-color: #838383 !important; /* Substitua pela cor desejada */
-  opacity: 1 !important; /* Garante que os pontos sejam totalmente visíveis */
+  background-color: #838383 !important;
+  opacity: 1 !important;
 }
 
-/* Cor dos pontos ativos */
 .swiper-pagination-bullet-active {
-  background-color: #303030 !important; /* Substitua pela cor desejada para o ponto ativo */
+  background-color: #303030 !important;
 }

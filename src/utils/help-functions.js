@@ -20,6 +20,7 @@ export const searchResult = () => {
   
   header.insertBefore(searchResultDiv, children[children.length - 1]);
   searchResultDiv.appendChild(searchResultSpan);
+  searchInput.value = '';
 }
 
 export const addCategories = () => {

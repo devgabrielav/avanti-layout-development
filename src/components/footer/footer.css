@@ -31,7 +31,7 @@ footer a {
   justify-content: start;
   left: 396px;
   margin: 30px 50px 0 0;
-  width: 194px;
+  width: 12.125rem;
 }
 
 .socials-div {
@@ -40,7 +40,7 @@ footer a {
   gap: 30px;
   height: 26px;
   justify-content: start;
-  width: 194px;
+  width: 100%;
 }
 
 .info-divs div {
@@ -56,7 +56,7 @@ footer a {
   left: 732px;
   letter-spacing: 0px;
   line-height: 100%;
-  width: 220px;
+  width: 13.75rem;
 }
 
 .inst-help-service-main-div {
@@ -97,7 +97,7 @@ footer a {
   flex-direction: column;
   height: 180px;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
 }
 
 .main-text-second-half-footer {
@@ -109,7 +109,7 @@ footer a {
   line-height: 20px;
   margin: auto;
   text-align: center;
-  width: 1074px;
+  width: 67.125rem;
 }
 
 .dropdown-icon {

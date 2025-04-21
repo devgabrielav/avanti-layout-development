@@ -4,10 +4,10 @@
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  height: 400px;
-  padding: 5px 15px;
+  height: 25.563rem;
+  padding: 5px 8px;
   position: relative;
-  width: 200px;
+  width: 14.875rem;
 }
 
 .new-tag {
@@ -25,35 +25,36 @@
   text-transform: uppercase;
   position: absolute;
   top: 7px;
-  width: 41px;
+  width: 2.563rem;
 }
 
 .item-image {
-  height: 222px;
+  height: 13.875rem;
   left: 8px;
   top: 6px;
-  width: 215px;
+  width: 100%;
 }
 
 .item-title {
   font-family: "Nunito Sans";
   font-size: 14px;
   font-weight: 400;
-  height: 39px;
-  left: 8px;
+  height: 2.438rem;
   letter-spacing: 0%;
   line-height: 100%;
-  text-transform: capitalize;  
-  top: 244px;
+  text-transform: capitalize;
+  margin-right: 10px;  
   margin-top: 15px;
-  width: 222px;
+  width: 100%;
 }
 
 .values-div {
   align-items: start;
   display: flex;
   gap: 10px;
-  margin-top: 10px;
+  height: 3.625rem;
+  margin-top: 15px;
+  width: 11rem;
 }
 
 .original-price {
@@ -85,13 +86,14 @@
   padding-left: 4px;
   padding-right: 4px;
   padding-top: 2px;
-  left: 90px;
-  top: 295px;
-  width: 64px;
+  text-align: center;
+  width: 4.688rem;
 }
 
 .payment-type {
   margin: 10px 0 15px 0;
+  height: 3.625rem;
+  width: 11rem;
 }
 
 .start-payment-type {
@@ -120,7 +122,7 @@
   font-size: 14px;
   font-weight: 700;
   gap: 10px;
-  height: 40;
+  height: 2.5rem;
   left: 8px;
   letter-spacing: 0%;
   line-height: 20px;
@@ -130,7 +132,7 @@
   padding-top: 10px;
   text-align: center;
   top: 361px;
-  width: 200px;
+  width: 100%;
 }
 
 .blink {

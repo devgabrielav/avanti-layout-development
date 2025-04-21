@@ -50,23 +50,23 @@ fetch('src/components/dropdown-content/dropdown-content-dep.html')
     addCategories();
 });
 
-fetch('src/components/items-carrossel/items-carrossel.html')
+fetch('src/components/items-carousel/items-carousel.html')
   .then(response => response.text())
   .then(data => {
     const myItems = document.querySelectorAll('.items');
 
     myItems.forEach((item) => {
       item.innerHTML = `
-      <div class="carrossel-texts">
+      <div class="carousel-texts">
         <h3>Lançamentos</h3>
         <a href="#">Ver mais</a>
       </div>
       ${data}
     `;
 
-    const carrosselLinks = document.querySelectorAll('.carrossel-texts a');
+    const carouselLinks = document.querySelectorAll('.carousel-texts a');
 
-    carrosselLinks.forEach((link) => {
+    carouselLinks.forEach((link) => {
       link.addEventListener('click', (event) => {
         event.preventDefault();
 
