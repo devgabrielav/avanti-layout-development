@@ -49,7 +49,7 @@ export const addDropdownContent = (tags) => {
 }
 
 export const paragraphConditions = (screenSize) => {
-  if (screenSize < 500) {
+  if (screenSize < 600) {
     return [
       `
         Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
@@ -86,7 +86,7 @@ export const paragraphConditions = (screenSize) => {
 }
 
 export const footerParagraphConditions = (screenSize) => {
-  if (screenSize < 500) {
+  if (screenSize < 600) {
     return `
       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
       Ut wisi enim ad minim veniam, quis nostrud exerci.

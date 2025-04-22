@@ -2,31 +2,30 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 500px;
+  gap: 10px;
+  height: 29.875rem;
   justify-content: center;
   margin: auto;
   width: 80.525rem;
 }
 
 .swiper {
-  width: 100%;
   height: 100%;
-  overflow: hidden;
   flex-wrap: nowrap;
+  overflow: hidden;
+  width: 100%;
 }
 
 .swiper-slide {
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
   height: auto;
+  justify-content: center;
   width: 100%;
 }
 
 .mySwiper {
   display: flex;
-  gap: 50px;
-  height: 450px;
   width: 100%;
 }
 
@@ -41,18 +40,18 @@
 .items-container {
   align-items: center;
   display: flex;
+  gap: 17px;
+  height: 25.563rem;
   justify-content: center;
-  height: 420px;
-  gap: 10px;
   width: 100%;
 }
 
 .carousel-texts {
   align-items: center;
   display: flex;
-  height: 27px;
+  height: 1.688rem;
   justify-content: space-between;
-  width: 95%;
+  width: 78.688rem;
 }
 
 .carousel-texts h3 {
@@ -84,18 +83,18 @@
 
 .swiper-button-next {
   background-image: url('/src/assets/forward-arrow.png');
-  background-size: contain;
   background-repeat: no-repeat;
-  width: 1.875rem;
+  background-size: contain;
   height: 1.875rem;
+  width: 1.875rem;
 }
 
 .swiper-button-prev {
   background-image: url('/src/assets/previous-arrow.png');
-  background-size: contain;
   background-repeat: no-repeat;
-  width: 1.875rem;
+  background-size: contain;
   height: 1.875rem;
+  width: 1.875rem;
 }
 
 .swiper-button-next::after,
@@ -111,4 +110,30 @@
 
 .swiper-pagination-bullet-active {
   background-color: #303030 !important;
+}
+
+@media (max-width: 600px) {
+  .items {
+    height: 26.625rem;
+    width: 22.375rem;
+  }
+  .carousel-texts {
+    height: 1.375rem;
+    margin-bottom: -25px;
+    width: 100%;
+  }
+  .carousel-texts h3 {
+    font-size: 1em;
+  }
+  .carousel-texts a {
+    font-size: 14px;
+    text-decoration: underline;
+  }
+  .items-container {
+    gap: 10px;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
 }

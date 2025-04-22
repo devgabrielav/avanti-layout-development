@@ -1,28 +1,29 @@
-import { searchResult, addCategories, addDropdownContent, paragraphConditions, footerParagraphConditions } from "./utils/help-functions";
+import { searchResult, addCategories,
+        addDropdownContent, paragraphConditions,
+        footerParagraphConditions } from "./utils/help-functions";
 
 fetch(`src/components/header/header.html`)
   .then(response => response.text())
   .then(data => document.querySelector('header').innerHTML = data);
 
-  const chairImage = document.querySelector('.chair-image');
-  const selectedSpan = document.querySelector('.selected-span');
-  
+const chairImage = document.querySelector('.chair-image');
+const selectedSpan = document.querySelector('.selected-span');
 
-  const updateImageSrc = () => {
-    const screenWidth = window.innerWidth;
-  
-    if (screenWidth < 500) {
-      chairImage.src = '/src/assets/mobile-chair.png';
-      selectedSpan.innerHTML = 'Selected items up to';
-    } else {
-      chairImage.src = '/src/assets/chair.png';
-      selectedSpan.innerHTML = 'Itens selecionados com até';
-    }
-  };
+const updateImageSrc = () => {
+  const screenWidth = window.innerWidth;
 
-  updateImageSrc();
-  
-  window.addEventListener('resize', updateImageSrc);
+  if (screenWidth < 600) {
+    chairImage.src = '/src/assets/mobile-chair.png';
+    selectedSpan.innerHTML = 'Selected items up to';
+  } else {
+    chairImage.src = '/src/assets/chair.png';
+    selectedSpan.innerHTML = 'Itens selecionados com até';
+  }
+};
+
+updateImageSrc();
+
+window.addEventListener('resize', updateImageSrc);
 
 fetch('src/components/dropdown-content/dropdown-content.html')
   .then(response => response.text())
@@ -103,33 +104,32 @@ swiperScript.innerHTML = `
   },
   });
   `
-
   body.appendChild(swiperScript);
 })
 
 fetch('src/components/items-card/items-card.html')
-  .then(response => response.text())
-  .then(data => {
-    const containers = document.querySelectorAll('.items-container');
+.then(response => response.text())
+.then(data => {
+  const containers = document.querySelectorAll('.items-container');
 
-    const updateItemsContainer = () => {
-      const screenWidth = window.innerWidth;
+  const updateItemsContainer = () => {
+    const screenWidth = window.innerWidth;
 
-      containers.forEach((container) => {
-        container.innerHTML = '';
+    containers.forEach((container) => {
+      container.innerHTML = '';
 
-        const itemCount = screenWidth < 500 ? 2 : 5;
+      const itemCount = screenWidth < 600 ? 2 : 5;
 
-        for (let i = 0; i < itemCount; i++) {
-          container.innerHTML += data;
-        }
-      });
-    };
+      for (let i = 0; i < itemCount; i++) {
+        container.innerHTML += data;
+      }
+    });
+  };
 
-    updateItemsContainer();
+  updateItemsContainer();
 
-    window.addEventListener('resize', updateItemsContainer);
-  });
+  window.addEventListener('resize', updateItemsContainer);
+});
 
 
 fetch('src/components/mug-banner/mug-banner.html')
@@ -160,31 +160,37 @@ fetch('src/components/mug-banner/mug-banner.html')
   window.addEventListener('resize', updateMugParagraphs);
 });
 
-
-
 fetch('src/components/footer/footer.html')
   .then(response => response.text())
   .then(data => {
-    document.getElementById('footer-placeholder').innerHTML = data;
+    document.querySelector('footer').innerHTML = data;
 
     const handleResponsiveChanges = () => {
       const screenWidth = window.innerWidth;
 
       const flagsImg = document.querySelector('.flags-img');
       if (flagsImg) {
-        flagsImg.src = screenWidth < 500 ? '/src/assets/flags-mobile.png' : '/src/assets/flags.png';
+        flagsImg.src = screenWidth < 600 ? '/src/assets/flags-mobile.png' : '/src/assets/flags.png';
       }
 
       const footerParagraph = document.querySelector('.main-text-second-half-footer');
       footerParagraph.innerHTML = footerParagraphConditions(screenWidth);
 
-      if (screenWidth < 500) {
+      if (screenWidth < 600) {
         const headers = document.querySelectorAll('.info-divs h4');
+        const paymentTypesDiv = document.querySelector('.payment-types-div');
 
         headers.forEach((header) => {
           header.addEventListener('click', () => {
             const parentDiv = header.parentElement;
             parentDiv.classList.toggle('open');
+
+            const anyOpen = document.querySelector('.info-divs.open');
+            if (anyOpen) {
+              paymentTypesDiv.style.marginTop = '50px';
+            } else {
+              paymentTypesDiv.style.marginTop = '0';
+            }
           });
         });
       }

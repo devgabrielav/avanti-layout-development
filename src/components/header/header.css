@@ -9,8 +9,8 @@ header {
   height: 9.25rem;
   justify-content: space-between;
   left: 0;
-  right: 0;
   position: fixed;
+  right: 0;
   top: 0;
   width: 100%;
   z-index: 999;
@@ -20,7 +20,7 @@ header {
   align-items: center;
   background-color: #005CFF;
   display: flex;
-  height: 1.875rem;
+  height: 2.25rem;
   justify-content: center;
   width: 100%;
 }
@@ -30,7 +30,7 @@ header {
   font-family: "Nunito Sans";
   font-size: 0.875em;
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 .top-discount-value-span {
@@ -77,8 +77,8 @@ header {
   border: none;
   border-radius: 10px;
   height: 2.375rem;
-  padding-left: 15px;
   outline: none;
+  padding-left: 15px;
   width: 30rem;
 }
 

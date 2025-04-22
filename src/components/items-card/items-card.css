@@ -17,27 +17,25 @@
   font-family: Nunito Sans;
   font-size: 10px;
   font-weight: 700;
-  height: 22px;
+  height: 1.438rem;
   left: 8px;
   letter-spacing: 0%;
   line-height: 22px;
+  position: absolute;
   text-align: center;
   text-transform: uppercase;
-  position: absolute;
   top: 7px;
   width: 2.563rem;
 }
 
 .item-image {
   height: 13.875rem;
-  left: 8px;
-  top: 6px;
   width: 100%;
 }
 
 .item-title {
   font-family: "Nunito Sans";
-  font-size: 14px;
+  font-size: 0.85em;
   font-weight: 400;
   height: 2.438rem;
   letter-spacing: 0%;
@@ -59,7 +57,7 @@
 
 .original-price {
   font-family: "Nunito Sans";
-  font-size: 12px;
+  font-size: 0.75em;
   font-weight: 400;
   letter-spacing: 0%;
   line-height: 100%;
@@ -68,8 +66,8 @@
 }
 
 .discount-price {
-  font-family: Nunito Sans;
-  font-size: 16px;
+  font-family: 'Nunito Sans';
+  font-size: 1em;
   font-weight: 700;
   letter-spacing: 0%;
   line-height: 100%;
@@ -77,28 +75,32 @@
 }
 
 .discount-percent {
+  align-items: center;
   background-color: #5EC0BE;
   border-radius: 4px;
   color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  font-family: 'Nunito Sans';
   gap: 10px;
-  height: 20px;
+  height: 1.25rem;
   padding-bottom: 2px;
   padding-left: 4px;
   padding-right: 4px;
   padding-top: 2px;
   text-align: center;
-  width: 4.688rem;
+  width: 5rem;
 }
 
 .payment-type {
-  margin: 10px 0 15px 0;
   height: 3.625rem;
+  margin: 10px 0 15px 0;
   width: 11rem;
 }
 
 .start-payment-type {
   font-family: "Nunito Sans";
-  font-size: 13px;
+  font-size: 0.85rem;
   font-weight: 400;
   letter-spacing: 0%;
   line-height: 100%;
@@ -106,7 +108,7 @@
 
 .payment-type-values {
   font-family: "Nunito Sans";
-  font-size: 13px;
+  font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0%;  
   line-height: 100%;
@@ -123,7 +125,6 @@
   font-weight: 700;
   gap: 10px;
   height: 2.5rem;
-  left: 8px;
   letter-spacing: 0%;
   line-height: 20px;
   padding-bottom: 10px;
@@ -131,7 +132,6 @@
   padding-right: 24px;
   padding-top: 10px;
   text-align: center;
-  top: 361px;
   width: 100%;
 }
 
@@ -141,11 +141,42 @@
 
 @keyframes blink-animation {
   from {
-    background-color: rgba(91, 151, 255, 0.8); /* Azul mais saturado com 60% de opacidade */
-    color: #FFFFFF; /* Cor do texto */
+    background-color: rgba(91, 151, 255, 0.8);
+    color: #FFFFFF;
   }
   to {
-    background-color: rgba(86, 145, 247, 0.6); /* Azul mais claro com 40% de opacidade */
-    color: #FFFFFF; /* Mantém o texto branco */
+    background-color: rgba(86, 145, 247, 0.6);
+    color: #FFFFFF;
+}
+}
+
+@media (max-width: 600px) {
+  .cards {
+    height: 22.813rem;
+    width: 10.875rem;
+  }
+  .item-title {
+    font-size: 0.85em;
+  }
+  .values-div {
+    height: 3.625rem;
+    width: 10rem;
+  }
+  .discount-percent {
+    font-size: 11px;
+    font-weight: 700;
+    width: 4rem;
+  }
+  .payment-type {
+    margin: 0;
+  }
+  .payment-type span {
+    color: #303030;
+    font-size: 12px;
+  }
+  .buy-button {
+    height: 40px;
+    margin: 0;
+    width: 158px;
   }
 }
